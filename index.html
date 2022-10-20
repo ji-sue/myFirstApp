@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Reservation Form</title>
+
+<style>
+    footer {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    }
+
+    .logo {
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+</head>
+
+<body style="text-align:center;">
+    <header>
+        <img src="logo.png" class="logo">
+        <br>
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#Location">Location</a>
+            <a href="#Blog">Blog</a>
+        </nav>
+        <h1 style="color:rgb(124, 23, 23)">Book A Trip</h1>
+
+    </header>
+    <main>
+        <form action="" method="post">
+            <label for="start">Book a Date</label>
+            <input type="date" id="start" name="trip-start" value="2022-10-20" min='2022-10-20'
+                max='2022-12-31'><br><br>
+            <label for="range">Number of People</label>
+            <input type="range" id="people" value="2" min="1" max="10"
+                oninput="this.nextElementSibling.value = this.value">
+            <output>2</output><br><br>
+            <label for="Location">Location</label>
+            <input list="Location">
+            <datalist id="Location">
+                <option value="Uptown">
+                <option value="Downtown">
+            </datalist><br>
+            <video width="320" height="240" controls muted>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.ogg" type="video/ogg">
+            </video><br>
+            <label for="rate">Rate</label>
+            <input type="range" id="rate" name="rating" list="tickmarks" step="25" />
+            <datalist id="tickmarks">
+                <option value="0"></option>
+                <option value="25"></option>
+                <option value="50"></option>
+                <option value="75"></option>
+                <option value="100"></option>
+            </datalist><br><br><br>
+            <input type="checkbox" id="checkbox" unchecked>
+            <label for="checkbox">I agree to the cancellation policy</label><br><br>
+            <input type="button" value="Book Table">
+        </form>
+    </main>
+
+    <footer id="footer">
+        <small>
+            <div>
+                <p>Copyright &copy; Jaycee V. Capuno. Made with &hearts;</p>
+            </div>
+        </small>
+    </footer>
+</body>
+
+</html>
